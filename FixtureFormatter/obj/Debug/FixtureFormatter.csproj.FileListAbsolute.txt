@@ -1,0 +1,12 @@
+C:\Users\Mawer\Desktop\FixtureFormatter\FixtureFormatter\FixtureFormatter\bin\Debug\FixtureFormatter.exe.config
+C:\Users\Mawer\Desktop\FixtureFormatter\FixtureFormatter\FixtureFormatter\bin\Debug\FixtureFormatter.exe
+C:\Users\Mawer\Desktop\FixtureFormatter\FixtureFormatter\FixtureFormatter\bin\Debug\FixtureFormatter.pdb
+C:\Users\Mawer\Desktop\FixtureFormatter\FixtureFormatter\FixtureFormatter\obj\Debug\FixtureFormatter.csprojResolveAssemblyReference.cache
+C:\Users\Mawer\Desktop\FixtureFormatter\FixtureFormatter\FixtureFormatter\obj\Debug\FixtureFormatter.exe
+C:\Users\Mawer\Desktop\FixtureFormatter\FixtureFormatter\FixtureFormatter\obj\Debug\FixtureFormatter.pdb
+D:\Users\Jack_\Desktop\FixtureFormatter\FixtureFormatter\bin\Debug\FixtureFormatter.exe.config
+D:\Users\Jack_\Desktop\FixtureFormatter\FixtureFormatter\obj\Debug\FixtureFormatter.exe
+D:\Users\Jack_\Desktop\FixtureFormatter\FixtureFormatter\obj\Debug\FixtureFormatter.pdb
+D:\Users\Jack_\Desktop\FixtureFormatter\FixtureFormatter\bin\Debug\FixtureFormatter.exe
+D:\Users\Jack_\Desktop\FixtureFormatter\FixtureFormatter\bin\Debug\FixtureFormatter.pdb
+D:\Users\Jack_\Desktop\FixtureFormatter\FixtureFormatter\obj\Debug\FixtureFormatter.csprojResolveAssemblyReference.cache

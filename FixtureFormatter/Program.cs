@@ -42,11 +42,11 @@ namespace FixtureFormatter
             writeLine("Instructions:");
             writeLine("File must have been downloaded from www.britishhorseracing.com/resource-centre/fixture-list/");
             writeLine("If the file has been changed over previous years, please contact the developer at Jack_Duffy@outlook.com");
-            writeLine("Input file must be in CSV format");
-            writeLine("Input file must be made of the following columns - DAY, DATE, COURSE, CODE, SURFACT, SESSION, TYPE");
+            writeLine("Input file must be in CSV format (if in XLSX, open in Excel and save as CSV)");
+            writeLine("Input file must be made of the following columns - DAY, DATE, COURSE, CODE, SURFACE, SESSION, TYPE (these columns should be removed before running the program)");
             writeLine("");
             writeLine("Verification:");
-            writeLine("Please ensure that the file format is named 'FIXTURES_LIST' and it is located on the desktop.");
+            writeLine("Please ensure that the file is a CSV and named 'FIXTURES_LIST'. It should be located in the same place as this program.");
             writeLine("Are you ready to proceed?");
             userResponseKey = Console.ReadKey();
             userResponse = userResponseKey.KeyChar.ToString();
@@ -62,8 +62,8 @@ namespace FixtureFormatter
 
         static void readFile()
         {
-            string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
-            string filePath = Path.Combine(desktopPath, "FIXTURES_LIST.csv");
+            //string desktopPath = Environment.GetFolderPath(Environment.SpecialFolder.Desktop);
+            //string filePath = Path.Combine("FIXTURES_LIST.csv");
             bool fileReadSuccessful = false;
 
             numberOfLines = 0;
@@ -71,7 +71,7 @@ namespace FixtureFormatter
             writeLine("Reading File, please wait.");
             try
             {
-                using (var reader = new StreamReader(filePath))
+                using (var reader = new StreamReader("FIXTURES_LIST.csv"))
                 {
                     while (!reader.EndOfStream)
                     {
@@ -208,7 +208,6 @@ namespace FixtureFormatter
                             monthName = "December";
                             break;
                     }
-
                     writeLine("Success. Content has been filtered for " + monthName);
                 }
 
@@ -221,7 +220,7 @@ namespace FixtureFormatter
 
                 if (userResponse == "Y" || userResponse == "y")
                 {
-                    writeLine("Which months would you want to exclude? (seperate by a - )");
+                    writeLine("Which months would you want to exclude? (seperate by a comma )");
                     string userExclusions = Console.ReadLine();
                     string[] monthsToExclude = userExclusions.Split(',');
 
@@ -233,7 +232,6 @@ namespace FixtureFormatter
                     List<string> tempSession = new List<string>();
                     List<string> tempType = new List<string>();
                     int tempNumberOfLines = 0;
-
 
                     for (int i = 0; i < numberOfLines; i++)
                     {
@@ -353,20 +351,16 @@ namespace FixtureFormatter
                     for (int i = 0; i < numberOfLines; i++)
                     {
                         string[] dateStructure = inputDate[i].Split('/');
-
                         dateDay.Add(dateStructure[0]);
                         dateMonth.Add(dateStructure[1]);
                         dateYear.Add(dateStructure[2]);
-
                         alternateDate.Add(dateStructure[2] + "-" + dateStructure[1] + "-" + dateStructure[0]);
-
                     }
 
                     writeLine("Creating post title");
                     List<string> postTitles = new List<string>();
                     for (int i = 0; i < numberOfLines; i++)
                     {
-
                         switch (dateMonth[i])
                         {
                             case "01":
@@ -406,12 +400,8 @@ namespace FixtureFormatter
                                 dateMonth[i] = "December";
                                 break;
                         }
-
-
                         postTitles.Add(inputCourse[i] + " (" + inputSession[i] + " " + inputCode[i] + " Meeting) - " + inputDay[i] + " " + dateDay[i] + " " + dateMonth[i] + " " + dateYear[i]);
-
                     }
-
 
                     writeLine("Building output content");
                     List<string> output = new List<string>();
@@ -485,8 +475,6 @@ namespace FixtureFormatter
                                 case 19:
                                     featuredImage = "http://racecourseguide.co.uk/wp-content/uploads/2016/09/market-rasen-39.jpg";
                                     break;
-
-
                             }
                         }
 
@@ -555,18 +543,16 @@ namespace FixtureFormatter
                                     featuredImage = "http://racecourseguide.co.uk/wp-content/uploads/2016/09/lingfield-flat-6.jpg";
                                     break;
                             }
-
                         }
-
 
                         output.Add(postTitles[i] + "," + "RPG" + "," + "01/01/1970" + "," + "publish" + "," + featuredImage + "," + alternateDate[i] + "," + (inputCourse[i] + " " + inputDate[i]) + "," + inputCourse[i]);
 
                     }
 
                     writeLine("Writing content to CSV");
-                    string outputPath = Path.Combine(desktopPath, "RPGFixtures.csv");
+                    //string outputPath = Path.Combine(desktopPath, "RPGFixtures.csv");
 
-                    using (StreamWriter outputFile = new StreamWriter(outputPath))
+                    using (StreamWriter outputFile = new StreamWriter("RPGFixtures.csv"))
                     {
                         for(int i = 0; i < numberOfLines; i++)
                         {

@@ -10,3 +10,9 @@ D:\Users\Jack_\Desktop\FixtureFormatter\FixtureFormatter\obj\Debug\FixtureFormat
 D:\Users\Jack_\Desktop\FixtureFormatter\FixtureFormatter\bin\Debug\FixtureFormatter.exe
 D:\Users\Jack_\Desktop\FixtureFormatter\FixtureFormatter\bin\Debug\FixtureFormatter.pdb
 D:\Users\Jack_\Desktop\FixtureFormatter\FixtureFormatter\obj\Debug\FixtureFormatter.csprojResolveAssemblyReference.cache
+D:\Users\Jack_\Documents\GitHub\RPG-Fixtures-Formatter\FixtureFormatter\bin\Debug\FixtureFormatter.exe.config
+D:\Users\Jack_\Documents\GitHub\RPG-Fixtures-Formatter\FixtureFormatter\obj\Debug\FixtureFormatter.exe
+D:\Users\Jack_\Documents\GitHub\RPG-Fixtures-Formatter\FixtureFormatter\obj\Debug\FixtureFormatter.pdb
+D:\Users\Jack_\Documents\GitHub\RPG-Fixtures-Formatter\FixtureFormatter\bin\Debug\FixtureFormatter.exe
+D:\Users\Jack_\Documents\GitHub\RPG-Fixtures-Formatter\FixtureFormatter\bin\Debug\FixtureFormatter.pdb
+D:\Users\Jack_\Documents\GitHub\RPG-Fixtures-Formatter\FixtureFormatter\obj\Debug\FixtureFormatter.csprojResolveAssemblyReference.cache
